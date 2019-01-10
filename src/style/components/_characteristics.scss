@@ -1,0 +1,77 @@
+$types-colors: (
+  81898B: #81898B,
+  E9B021: #E9B021,
+  DFDAD7: #DFDAD7,
+  A5988D: #A5988D,
+  AC9B8A: #AC9B8A,
+  1058183: #058183,
+  847B6C: #847B6C,
+  D45B24: #D45B24,
+  434C51: #434C51,
+  BCB2A6: #BCB2A6,
+  7B9F9F: #7B9F9F,
+  97A3B3: #97A3B3,
+  EEF3EF: #EEF3EF,
+  E8DFD0: #E8DFD0
+);
+
+
+.characteristics {
+  padding: rem(16 25 11);
+  @media (max-width: 600px) {
+    padding: 33px 41px 58px;
+    background: $border-color;
+  }
+  @media (max-width: 370px) {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.characteristics__title {
+  padding-bottom: rem(18);
+  margin-bottom: rem(18);
+  border-bottom: 1px solid $border-color;
+}
+
+.characteristics__subtitle {
+  &_margin-bottom {
+    margin-bottom: rem(22);
+  }
+}
+
+.characteristics__delivery {
+  margin-bottom: rem(22);
+}
+
+.characteristics__types-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: rem(23);
+}
+
+.characteristics__type {
+  width: rem(60);
+  height: rem(60);
+  border-radius: 50%;
+  @each $type, $color in $types-colors {
+    &_color-#{$type} {
+      background: $color;
+    }
+  }
+  &_color-FFFFFF {
+    border: 1px solid $main-font-color;
+  }
+  &_color-example {
+    background: url("../img/catalog/color-example.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.characteristics__text {
+  font-weight: 300;
+}

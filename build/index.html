@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-direction" content="telephone=no">
+  <meta name="viewport" content="width=device-width, height=device-height">
+  <title>Эксклюзивный дилер Target Point® в Санкт-Петербурге</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600|Roboto:300,400,400i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <div class="modal call-modal custom-modal" id="call-modal">
+    <a class="modal-close" href="" rel="modal:close">
+      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.902 8l5.704-5.705A1.345 1.345 0 1 0 13.705.394L8 6.099 2.295.394A1.345 1.345 0 1 0 .394 2.295L6.098 8 .394 13.705a1.345 1.345 0 0 0 1.901 1.901L8 9.901l5.705 5.705a1.345 1.345 0 0 0 1.901-1.901L9.902 8z"
+        fill="#A19B9B" />
+      </svg>
+    </a>
+    <div class="call-modal__container">
+      <div class="call-modal__col call-modal__col_form">
+        <form class="form">
+          <div class="call-modal__title">Заказать обратный звонок</div>
+          <div class="call-modal__text">Мы перезвоним Вам через 2 минуты</div>
+          <div class="form__item">
+            <input class="form__input form__input_bordered" type="text" id="name-2" name="name-2" placeholder="Введите Ваше имя" required>
+          </div>
+          <div class="form__item">
+            <input class="form__input form__input_bordered" type="tel" id="tel-2" name="tel-2" placeholder="Введите Ваш телефон" required>
+          </div>
+          <button class="btn btn_submit _open-success-call-modal" type="submit">Отправить</button>
+        </form>
+        <div class="form__item form__item_no-max-width form__item_bg">
+          <label class="form__label checkbox" for="accept-2">Отправляя нам заявку, Вы даете согласие на обработку своих персональных данных. Ваши данные не будут переданы 3-м лицам. Мы заботимся о конфиденциальности данных своих клиентов.
+            <input id="accept-2" type="checkbox" checked required><span class="checkbox__checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="call-modal__col call-modal__col_img"></div>
+    </div>
+  </div>
+  <div class="modal custom-modal custom-modal_padding" id="success-modal">
+    <a class="modal-close" href="" rel="modal:close">
+      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.902 8l5.704-5.705A1.345 1.345 0 1 0 13.705.394L8 6.099 2.295.394A1.345 1.345 0 1 0 .394 2.295L6.098 8 .394 13.705a1.345 1.345 0 0 0 1.901 1.901L8 9.901l5.705 5.705a1.345 1.345 0 0 0 1.901-1.901L9.902 8z"
+        fill="#A19B9B" />
+      </svg>
+    </a>
+    <div class="custom-modal__container">
+      <div class="custom-modal__title">Ваша заявка успешно отправлена!</div>
+      <div class="custom-modal__img">
+        <img src="img/success-modal-img.svg" alt="Ваша заявка успешно отправлена!">
+      </div>
+      <div class="art-border art-border_success-call-modal"></div>
+    </div>
+  </div>
+  <div class="modal custom-modal custom-modal_padding" id="success-calc-modal">
+    <a class="modal-close" href="" rel="modal:close">
+      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.902 8l5.704-5.705A1.345 1.345 0 1 0 13.705.394L8 6.099 2.295.394A1.345 1.345 0 1 0 .394 2.295L6.098 8 .394 13.705a1.345 1.345 0 0 0 1.901 1.901L8 9.901l5.705 5.705a1.345 1.345 0 0 0 1.901-1.901L9.902 8z"
+        fill="#A19B9B" />
+      </svg>
+    </a>
+    <div class="custom-modal__container">
+      <div class="custom-modal__title">Ваша заявка на расчёт успешно отправлена!</div>
+      <div class="custom-modal__img">
+        <img src="img/calc-modal-img.svg" alt="Ваша заявка на расчёт успешно отправлена!">
+      </div>
+      <div class="art-border art-border_success-calc-modal"></div>
+    </div>
+  </div>
+  <div class="modal custom-modal custom-modal_padding" id="success-master-modal">
+    <a class="modal-close" href="" rel="modal:close">
+      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.902 8l5.704-5.705A1.345 1.345 0 1 0 13.705.394L8 6.099 2.295.394A1.345 1.345 0 1 0 .394 2.295L6.098 8 .394 13.705a1.345 1.345 0 0 0 1.901 1.901L8 9.901l5.705 5.705a1.345 1.345 0 0 0 1.901-1.901L9.902 8z"
+        fill="#A19B9B" />
+      </svg>
+    </a>
+    <div class="custom-modal__container">
+      <div class="custom-modal__title">Ваша заявка на вызов замерщика успешно отправлена!</div>
+      <div class="custom-modal__img">
+        <img src="img/calc-modal-img.svg" alt="Ваша заявка на вызов замерщика успешно отправлена!">
+      </div>
+      <div class="art-border art-border_success-calc-modal"></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <div class="header__col header__col_padding-top header__col_title">
+          <h1>Официальный представитель<br />Target Point® в Санкт-Петербурге</h1><a class="header__tel" href="tel:89117771218">8 (911) 777 1218</a>
+        </div>
+        <div class="header__col header__col_logo">
+          <div class="header__burger">
+            <button class="burger _open-menu"></button>
+          </div>
+          <div class="header__logo">
+            <img src="img/logo.svg" alt="Логотип Target Point">
+          </div>
+        </div>
+        <div class="header__col header__col_big-padding-top header__col_order-call">
+          <button class="btn _open-order-call-modal">Заказать звонок</button><a class="btn btn-link" href="call-order.html">Заказать звонок</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="nav nav_desktop">
+    <div class="container">
+      <div class="nav__container">
+        <div class="nav__item"> <a class="nav__link _scroll-btn" href="#about">О фабрике</a>
+        </div>
+        <div class="nav__item"> <a class="nav__link _scroll-btn" href="#features">Преимущества</a>
+        </div>
+        <div class="nav__item"> <a class="nav__link _scroll-btn" href="#catalog">Цены</a>
+        </div>
+        <div class="nav__item"> <a class="nav__link _scroll-btn" href="#reviews">Отзывы</a>
+        </div>
+        <div class="nav__item"> <a class="nav__link _scroll-btn" href="#purchase">Процесс покупки</a>
+        </div>
+        <div class="nav__item"> <a class="nav__link _scroll-btn" href="#contacts">Контакты</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="menu _menu">
+    <button class="menu__close _close-menu"></button>
+    <nav class="nav nav_mobile">
+      <div class="container">
+        <div class="nav__container">
+          <div class="nav__item"> <a class="nav__link _scroll-btn" href="#about">О фабрике</a>
+          </div>
+          <div class="nav__item"> <a class="nav__link _scroll-btn" href="#features">Преимущества</a>
+          </div>
+          <div class="nav__item"> <a class="nav__link _scroll-btn" href="#catalog">Цены</a>
+          </div>
+          <div class="nav__item"> <a class="nav__link _scroll-btn" href="#reviews">Отзывы</a>
+          </div>
+          <div class="nav__item"> <a class="nav__link _scroll-btn" href="#purchase">Процесс покупки</a>
+          </div>
+          <div class="nav__item"> <a class="nav__link _scroll-btn" href="#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <section class="intro">
+      <div class="container">
+        <div class="intro__container">
+          <div class="intro__info">
+            <ul class="features-info">
+              <li class="features-info__item features-info__item_size-icon">Выезд замерщика на обьект</li>
+              <li class="features-info__item features-info__item_showroom">Шоу-рум в центре Санкт - Петербурга</li>
+              <li class="features-info__item features-info__item_garant-icon">Профессиональная сборка мебели. Гарантия на комплектующие</li>
+            </ul>
+            <button class="call-btn _open-order-call-modal"><span class="call-btn__text">Я хочу сделать замер</span><span class="call-btn__icon"> <img src="img/tel.svg" alt="Иконка телефона"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <a class="mouse-btn _scroll-btn" href="#about"></a>
+    </section>
+    <div class="features-info features-info_mobile">
+      <ul>
+        <li class="features-info__item features-info__item_mobile features-info__item_mobile features-info__item_size-icon">Выезд замерщика на обьект</li>
+        <li class="features-info__item features-info__item_mobile features-info__item_mobile features-info__item_showroom">Шоу-рум в центре Санкт - Петербурга</li>
+        <li class="features-info__item features-info__item_mobile features-info__item_mobile features-info__item_garant-icon">Профессиональная сборка мебели. Гарантия на комплектующие</li>
+      </ul>
+    </div>
+    <section class="about" id="about">
+      <div class="title">
+        <h2>О фабрике</h2>
+      </div>
+      <div class="container">
+        <div class="about__container">
+          <div class="about__text">
+            <p>Что такое идеальный дом? Это место где Вам комфортно, вне зависимости от назначения помещения: гостиная, кухня, ванная комната или кладовая. Везде, где Вы заботитесь о себе, стараясь оптимизировать время. Стирать и гладить в приятной обстановке,
+              располагая функциональной мебелью; аккуратно убирать одежду и обувь, максимально эффективно используя любое пространство. Все это становится возможным благодаря универсальной мебели <span class="bold">Birex®</span>, которая обеспечивает повседневный
+              комфорт, качество и дарит вдохновляющие эмоции.</p>
+            <p>Компания <span class="bold">Birex®</span> исследовала множество уникальных решений, чтобы помочь нам сделать быт менее рутинным. Потому что жизнь включает в себя много повседневных нужд: уборка, стирка, глажка. Мебель итальянского бренда
+              <span
+              class="bold">Birex®</span>делает эти моменты более простыми и, следовательно, более эстетичными, благодаря стилю, который никогда не выходит из моды, и гарантированному качеству.</p>
+          </div>
+          <div class="about__img">
+            <img src="img/about.jpg" alt="Фабрика Birex">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <div class="title">
+        <h2>Преимущества</h2>
+      </div>
+      <div class="container">
+        <div class="features__items">
+          <div class="features__item">
+            <div class="features__icon">
+              <img src="img/features/feature-0.svg" alt="Преимущество">
+            </div>
+            <div class="features__descr">Современный стиль в дизайне</div>
+          </div>
+          <div class="features__item">
+            <div class="features__icon">
+              <img src="img/features/feature-1.svg" alt="Преимущество">
+            </div>
+            <div class="features__descr">Прочные материалы</div>
+          </div>
+          <div class="features__item">
+            <div class="features__icon">
+              <img src="img/features/feature-2.svg" alt="Преимущество">
+            </div>
+            <div class="features__descr">Эргономика и функциональность</div>
+          </div>
+          <div class="features__item">
+            <div class="features__icon">
+              <img src="img/features/feature-3.svg" alt="Преимущество">
+            </div>
+            <div class="features__descr">100% Италия</div>
+          </div>
+          <div class="features__item">
+            <div class="features__icon">
+              <img src="img/features/feature-4.svg" alt="Преимущество">
+            </div>
+            <div class="features__descr">Для качественной сантехники</div>
+          </div>
+          <div class="features__item">
+            <div class="features__icon">
+              <img src="img/features/feature-5.svg" alt="Преимущество">
+            </div>
+            <div class="features__descr">Трендовые цвета и текстуры</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog" id="catalog">
+      <div class="title">
+        <h2>Стоимость мебели для ванной</h2>
+      </div>
+      <div class="container">
+        <div class="catalog__container">
+          <div class="product-container">
+            <div class="product">
+              <div class="product__name">Серия мебели 45</div>
+              <div class="product__img">
+                <img src="img/catalog/45.jpg" alt="Серия мебели 45">
+              </div>
+              <div class="product__price-container">
+                <div class="product__price-item"><span class="product__price">540 000</span><span class="product__icon"><img src="img/catalog/coin.svg" alt="Рубль"></span>
+                </div>
+                <div class="product__btn">
+                  <button class="product__show-more _show-more-btn accordion"></button>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="characteristics">
+                <div class="characteristics__title">Современный стиль. Модель 45</div>
+                <div class="characteristics__types">
+                  <div class="characteristics__subtitle characteristics__subtitle_margin-bottom">Популярные цвета фасадов</div>
+                  <div class="characteristics__types-container">
+                    <div class="characteristics__type characteristics__type_color-81898B"></div>
+                    <div class="characteristics__type characteristics__type_color-E9B021"></div>
+                    <div class="characteristics__type characteristics__type_color-DFDAD7"></div>
+                    <div class="characteristics__type characteristics__type_color-example"></div>
+                  </div>
+                </div>
+                <div class="characteristics__delivery">
+                  <div class="characteristics__subtitle">Сроки поставки:&nbsp;<span class="characteristics__text">3 месяца</span>
+                  </div>
+                </div>
+                <div class="characteristics__materials">
+                  <div class="characteristics__subtitle">Материалы:&nbsp;<span class="characteristics__text">влагостойкий МДФ / меламиновое покрытие под древесные структуры / покрытия с различными цветами</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <div class="product__name">Серия мебели Hosoi</div>
+              <div class="product__img">
+                <img src="img/catalog/hosoi.jpg" alt="Серия мебели Hosoi">
+              </div>
+              <div class="product__price-container">
+                <div class="product__price-item"><span class="product__price">740 000</span><span class="product__icon"><img src="img/catalog/coin.svg" alt="Рубль"></span>
+                </div>
+                <div class="product__btn">
+                  <button class="product__show-more _show-more-btn accordion"></button>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="characteristics">
+                <div class="characteristics__title">Современный стиль. Модель Hosoi</div>
+                <div class="characteristics__types">
+                  <div class="characteristics__subtitle characteristics__subtitle_margin-bottom">Популярные цвета фасадов</div>
+                  <div class="characteristics__types-container">
+                    <div class="characteristics__type characteristics__type_color-AC9B8A"></div>
+                    <div class="characteristics__type characteristics__type_color-1058183"></div>
+                    <div class="characteristics__type characteristics__type_color-847B6C"></div>
+                    <div class="characteristics__type characteristics__type_color-D45B24"></div>
+                  </div>
+                </div>
+                <div class="characteristics__delivery">
+                  <div class="characteristics__subtitle">Сроки поставки:&nbsp;<span class="characteristics__text">3 месяца</span>
+                  </div>
+                </div>
+                <div class="characteristics__materials">
+                  <div class="characteristics__subtitle">Материалы:&nbsp;<span class="characteristics__text">влагостойкий МДФ / глянцевые и матовые покрытия различных цветов</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <div class="product__name">Серия мебели Lapis</div>
+              <div class="product__img">
+                <img src="img/catalog/lapis.jpg" alt="Серия мебели Lapis">
+              </div>
+              <div class="product__price-container">
+                <div class="product__price-item"><span class="product__price">940 000</span><span class="product__icon"><img src="img/catalog/coin.svg" alt="Рубль"></span>
+                </div>
+                <div class="product__btn">
+                  <button class="product__show-more _show-more-btn accordion"></button>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="characteristics">
+                <div class="characteristics__title">Современный стиль. Модель Lapis</div>
+                <div class="characteristics__types">
+                  <div class="characteristics__subtitle characteristics__subtitle_margin-bottom">Популярные цвета фасадов</div>
+                  <div class="characteristics__types-container">
+                    <div class="characteristics__type characteristics__type_color-434C51"></div>
+                    <div class="characteristics__type characteristics__type_color-BCB2A6"></div>
+                    <div class="characteristics__type characteristics__type_color-847B6C"></div>
+                    <div class="characteristics__type characteristics__type_color-7B9F9F"></div>
+                  </div>
+                </div>
+                <div class="characteristics__delivery">
+                  <div class="characteristics__subtitle">Сроки поставки:&nbsp;<span class="characteristics__text">3 месяца</span>
+                  </div>
+                </div>
+                <div class="characteristics__materials">
+                  <div class="characteristics__subtitle">Материалы:&nbsp;<span class="characteristics__text">влагостойкое МДФ покрытие с различными цветами. Столешница из материала Mineralmarmo® </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <div class="product__name">Серия мебели Memento</div>
+              <div class="product__img">
+                <img src="img/catalog/memento.jpg" alt="Серия мебели Memento">
+              </div>
+              <div class="product__price-container">
+                <div class="product__price-item"><span class="product__price">750 000</span><span class="product__icon"><img src="img/catalog/coin.svg" alt="Рубль"></span>
+                </div>
+                <div class="product__btn">
+                  <button class="product__show-more _show-more-btn accordion"></button>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="characteristics">
+                <div class="characteristics__title">Современный стиль. Модель Memento</div>
+                <div class="characteristics__types">
+                  <div class="characteristics__subtitle characteristics__subtitle_margin-bottom">Популярные цвета фасадов</div>
+                  <div class="characteristics__types-container">
+                    <div class="characteristics__type characteristics__type_color-97A3B3"></div>
+                    <div class="characteristics__type characteristics__type_color-EEF3EF"></div>
+                    <div class="characteristics__type characteristics__type_color-E8DFD0"></div>
+                    <div class="characteristics__type characteristics__type_color-847B6C"></div>
+                  </div>
+                </div>
+                <div class="characteristics__delivery">
+                  <div class="characteristics__subtitle">Сроки поставки:&nbsp;<span class="characteristics__text">3 месяца</span>
+                  </div>
+                </div>
+                <div class="characteristics__materials">
+                  <div class="characteristics__subtitle">Материалы:&nbsp;<span class="characteristics__text">влагостойкий МДФ / глянцевые и матовые покрытия различных цветов</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <div class="product__name">Серия мебели Sidero</div>
+              <div class="product__img">
+                <img src="img/catalog/sidero.jpg" alt="Серия  мебели Sidero">
+              </div>
+              <div class="product__price-container">
+                <div class="product__price-item"><span class="product__price">850 000</span><span class="product__icon"><img src="img/catalog/coin.svg" alt="Рубль"></span>
+                </div>
+                <div class="product__btn">
+                  <button class="product__show-more _show-more-btn accordion"></button>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="characteristics">
+                <div class="characteristics__title">Современный стиль. Модель Sidero</div>
+                <div class="characteristics__types">
+                  <div class="characteristics__subtitle characteristics__subtitle_margin-bottom">Популярные цвета фасадов</div>
+                  <div class="characteristics__types-container">
+                    <div class="characteristics__type characteristics__type_color-D45B24"></div>
+                    <div class="characteristics__type characteristics__type_color-E8DFD0"></div>
+                    <div class="characteristics__type characteristics__type_color-97A3B3"></div>
+                    <div class="characteristics__type characteristics__type_color-847B6C"></div>
+                  </div>
+                </div>
+                <div class="characteristics__delivery">
+                  <div class="characteristics__subtitle">Сроки поставки:&nbsp;<span class="characteristics__text">3 месяца</span>
+                  </div>
+                </div>
+                <div class="characteristics__materials">
+                  <div class="characteristics__subtitle">Материалы:&nbsp;<span class="characteristics__text">влагостойкий МДФ / глянцевые и матовые покрытия различных цветов</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product">
+              <div class="product__name">Серия мебели Versa</div>
+              <div class="product__img">
+                <img src="img/catalog/versa.jpg" alt="Серия мебели Versa">
+              </div>
+              <div class="product__price-container">
+                <div class="product__price-item"><span class="product__price">450 000</span><span class="product__icon"><img src="img/catalog/coin.svg" alt="Рубль"></span>
+                </div>
+                <div class="product__btn">
+                  <button class="product__show-more _show-more-btn accordion"></button>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="characteristics">
+                <div class="characteristics__title">Современный стиль. Модель Versa</div>
+                <div class="characteristics__types">
+                  <div class="characteristics__subtitle characteristics__subtitle_margin-bottom">Популярные цвета фасадов</div>
+                  <div class="characteristics__types-container">
+                    <div class="characteristics__type characteristics__type_color-97A3B3"></div>
+                    <div class="characteristics__type characteristics__type_color-EEF3EF"></div>
+                    <div class="characteristics__type characteristics__type_color-E8DFD0"></div>
+                    <div class="characteristics__type characteristics__type_color-847B6C"></div>
+                  </div>
+                </div>
+                <div class="characteristics__delivery">
+                  <div class="characteristics__subtitle">Сроки поставки:&nbsp;<span class="characteristics__text">3 месяца</span>
+                  </div>
+                </div>
+                <div class="characteristics__materials">
+                  <div class="characteristics__subtitle">Материалы:&nbsp;<span class="characteristics__text">влагостойкий МДФ / глянцевые и матовые покрытия различных цветов</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="calculation">
+      <div class="container">
+        <div class="calculation__form">
+          <h3>Заказать расчёт онлайн и получить скидку&nbsp;15%</h3>
+          <div class="calculation__subtitle">Мы перезвоним Вам в течении 2-х минут</div>
+          <form class="form">
+            <div class="form__item">
+              <input class="form__input" type="text" id="name-1" name="name-1" placeholder="Ваше имя" required>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="tel" id="tel-1" name="tel-1" placeholder="Ваш номер" required>
+            </div>
+            <button class="btn btn_submit _open-calc-modal" type="submit">Рассчитать</button><a class="btn btn_submit btn-link" href="success-calc.html">Рассчитать</a>
+            <div class="form__item form__item_no-max-width">
+              <label class="form__label checkbox" for="accept-1">Отправляя нам заявку, Вы даете согласие на обработку своих персональных данных. Ваши данные не будут переданы 3-м лицам. Мы заботимся о конфиденциальности данных своих клиентов.
+                <input id="accept-1" type="checkbox" checked required><span class="checkbox__checkmark"></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="reviews" id="reviews">
+      <div class="title">
+        <h2>Отзывы покупателей</h2>
+      </div>
+      <div class="container">
+        <div class="reviews__slider reviews-slider">
+          <div>
+            <div class="reviews-slider__photo">
+              <img src="img/reviews/review-0.jpg" alt="Фотография">
+              <div class="reviews-slider__desktop-block">
+                <p class="reviews-slider__author">Владислав Эрнберг</p>
+                <p class="reviews-slider__occup">Архитектор</p>
+              </div>
+            </div>
+            <div class="reviews-slider__descr">
+              <div class="reviews-slider__mobile-block">
+                <p class="reviews-slider__author">Владислав Эрнберг</p>
+                <p class="reviews-slider__occup">Архитектор</p>
+              </div>
+              <p class="reviews-slider__text">Мне, как дизайнеру интерьера и архитектору, больше всего нравится работать над комплексными проектами: загородные дома, офисы, рестораны. Приятно осознавать, что клиенты становятся более требовательными к деталям и мелочам, и в этом я с
+                ними солидарен: если ты решил сделать загородный дом в современном стиле и уже выбрал итальянскую мебель, то нет смысла размениваться в оформлении бытовых помещений: прачечные, комнаты для хозяйственных нужд и кладовые, - всё должно соответствовать
+                основной линии интерьера. И в этом направлении, мебель <span class='bold'>Birex®</span> - мой фаворит!</p>
+            </div>
+          </div>
+          <div>
+            <div class="reviews-slider__photo">
+              <img src="img/reviews/review-1.jpg" alt="Фотография">
+              <div class="reviews-slider__desktop-block">
+                <p class="reviews-slider__author">Ирина Сумбайская</p>
+                <p class="reviews-slider__occup">Домохозяйка, блогер</p>
+              </div>
+            </div>
+            <div class="reviews-slider__descr">
+              <div class="reviews-slider__mobile-block">
+                <p class="reviews-slider__author">Ирина Сумбайская</p>
+                <p class="reviews-slider__occup">Домохозяйка, блогер</p>
+              </div>
+              <p class="reviews-slider__text"><span class='bold'>Birex®</span> мне понравился сразу. Хорошо, что в Петербурге я быстро нашла представительство этого бренда. В самом центре, недалеко от метро Площадь Восстания. Красивая и стильная мебель решила мои проблемы: кладовая и
+                прачечная больше не выглядят как хаос, в котором можно потеряться! Если Вы сомневаетесь в выборе, просто посмотрите модели в шоу-руме! Я довольна тем, что всё на своих местах! Итальянское качество ещё ни в одной из квартир не было лишним!</p>
+            </div>
+          </div>
+          <div>
+            <div class="reviews-slider__photo">
+              <img src="img/reviews/review-2.jpg" alt="Фотография">
+              <div class="reviews-slider__desktop-block">
+                <p class="reviews-slider__author">Игорь Волевой</p>
+                <p class="reviews-slider__occup">Автогонщик, бизнесмен</p>
+              </div>
+            </div>
+            <div class="reviews-slider__descr">
+              <div class="reviews-slider__mobile-block">
+                <p class="reviews-slider__author">Игорь Волевой</p>
+                <p class="reviews-slider__occup">Автогонщик, бизнесмен</p>
+              </div>
+              <p class="reviews-slider__text">Я не привык размениваться в мелочах и в принципе. Хороший дом и квартира, - это не роскошь, а норма для делового человека. Мебель <span class='bold'>Birex®</span> выбирал сам, так как люблю порядок во всём: в гардеробной, в ванной, в прачечной
+                и кладовой - везде должно быть чисто и комфортно, - это мой стиль. <span class='bold'>Birex®</span> хорош в цветовой гамме и безупречном качестве. Спортивный инвентарь просто идеально помещается в эти лаконичные шкафы. Рекомендую. Просто.
+                Качественно. Красиво.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="purchase" id="purchase">
+      <div class="title">
+        <h2>Процесс покупки</h2>
+      </div>
+      <div class="container">
+        <div class="purchase__items">
+          <div class="purchase__item">
+            <div class="purchase__icon">
+              <img src="img/purchase/purchase-0.svg" alt="Процесс покупки">
+            </div>
+            <div class="purchase__descr">Оставьте заявку на сайте, наш специалист свяжется с Вами в течении 2 минут</div>
+          </div>
+          <div class="purchase__item">
+            <div class="purchase__icon">
+              <img src="img/purchase/purchase-1.svg" alt="Процесс покупки">
+            </div>
+            <div class="purchase__descr">Посещение нашего шоу-рума позволит делально ознакомиться с итальянской мебелью</div>
+          </div>
+          <div class="purchase__item">
+            <div class="purchase__icon">
+              <img src="img/purchase/purchase-2.svg" alt="Процесс покупки">
+            </div>
+            <div class="purchase__descr">После совершения покупки, кухня собирается в Италии и отправляется в Россию</div>
+          </div>
+          <div class="purchase__item">
+            <div class="purchase__icon">
+              <img src="img/purchase/purchase-3.svg" alt="Процесс покупки">
+            </div>
+            <div class="purchase__descr">Мы осуществляем сборку гарнитура в соответствии с техническими характеристиками каждой модели</div>
+          </div>
+          <div class="purchase__item">
+            <div class="purchase__icon">
+              <img src="img/purchase/purchase-4.svg" alt="Процесс покупки">
+            </div>
+            <div class="purchase__descr">Гарантия качества от производителя 10 лет.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="call-order">
+      <div class="title">
+        <h2>Вызвать замерщика для расчёта</h2>
+      </div>
+      <div class="call-order__container">
+        <div class="container">
+          <form class="call-order__form form">
+            <div class="form__item">
+              <input class="form__input" type="text" id="name" name="name" placeholder="Введите Ваше имя" required>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="tel" id="tel" name="tel" placeholder="Ваш телефон" required>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="text" id="call-time" name="call-time" placeholder="Удобное время для звонка" required>
+            </div>
+            <button class="btn btn_submit _open-master-modal" type="submit">Вызвать замерщика</button><a class="btn btn_submit btn-link" href="success-call-master.html">Вызвать замерщика</a>
+            <div class="form__item form__item_no-max-width">
+              <label class="form__label checkbox" for="accept">Отправляя нам заявку, Вы даете согласие на обработку своих персональных данных. Ваши данные не будут переданы 3-м лицам. Мы заботимся о конфиденциальности данных своих клиентов.
+                <input id="accept" type="checkbox" checked required><span class="checkbox__checkmark"></span>
+              </label>
+            </div>
+          </form>
+          <div class="call-order__img">
+            <img src="img/call-order-img.jpg" alt="Интерьер">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts" id="contacts">
+      <div class="title">
+        <h2>Контакты</h2>
+      </div>
+      <div class="contacts__container">
+        <div class="container">
+          <div class="contacts__content">
+            <div class="contacts__item">Эксклюзивный дилер Target Point®
+              <br />в Санкт-Петербурге</div>
+            <div class="contacts__item contacts__item_font-weight-300">Мы работаем без выходных
+              <br />с 10.00 до 20.00</div>
+            <div class="contacts__item"> <a class="contacts__link" href="tel:89117771218">8 (911) 777 1218</a>
+            </div>
+            <div class="contacts__item">ул. Мытнинская, д. 29
+              <div><a class="contacts__link" href="mailto:info@berloni-spb.com">info@berloni-spb.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <div class="container">
+        <div class="title">
+          <h2>Салон мебели на карте</h2>
+        </div>
+      </div>
+      <div class="map__container">
+        <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab76ef5e9932be936a3ec25ca3f808e1955f7b92bb36ceb3e52aea3bb75ee7b0d&amp;amp;width=100%&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__col footer__col_logo">
+          <div class="footer__logo">
+            <img src="img/footer-logo.svg" alt="Логотип Target Point">
+          </div>
+        </div>
+        <div class="footer__col footer__col_contacts">
+          <div class="footer__contacts">
+            191144
+            <br />ул. Мытнинская, д. 29
+            <br /><a class="footer__link" href="tel:89117771218">8 (911) 777 1218</a><a class="footer__link" href="mailto:info@berloni-spb.com">info@berloni-spb.com</a>
+          </div>
+        </div>
+        <div class="footer__col footer__col_socials">
+          <div class="footer__social-icons">
+            <a class="footer__social-icon" href="https://vk.com/berlonispb" target="_blank">
+              <img src="img/social-icons/vk.svg" alt="Вконтакте">
+            </a>
+            <a class="footer__social-icon" href="https://www.facebook.com/berloni.spb/" target="_blank">
+              <img src="img/social-icons/facebook.svg" alt="Facebook">
+            </a>
+            <a class="footer__social-icon" href="https://www.instagram.com/berloni.spb/" target="_blank">
+              <img src="img/social-icons/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+        <div class="footer__col footer__col_links">
+          <div class="footer__links"><a class="footer__link" href="http://berloni-spb.com/katalog">Дизайн-студия</a><a class="footer__link" href="">Итальянские кухни</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

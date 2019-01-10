@@ -1,0 +1,34 @@
+.btn {
+  border: 2px solid $main-color;
+  padding: rem(7 18 8);
+  text-align: center;
+  font: {
+    size: rem(18);
+    weight: 400;
+  }
+  background: #fff;
+  transition: color 250ms, border-color 250ms;
+  white-space: nowrap;
+  display: block;
+  &:hover {
+    color: darken($main-font-color, 50%);
+  }
+  &_submit {
+    background: transparent;
+    margin-bottom: rem(36);
+  }
+  &._open-calc-modal,
+  &._open-master-modal,
+  &._open-order-call-modal {
+    @media (max-width: 540px) {
+      display: none;
+    }
+  }
+}
+
+.btn-link {
+  display: inline-block;
+  @media (min-width: 541px) {
+    display: none;
+  }
+}

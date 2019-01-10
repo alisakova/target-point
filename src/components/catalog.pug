@@ -1,0 +1,94 @@
+-
+  var catalogDatas = [
+    {
+      "name": "Серия мебели 45",
+      "price": "540 000",
+      "img": "45.jpg",
+      "subtitle": "Современный стиль. Модель 45",
+      "colors": [
+        "81898B",
+        "E9B021",
+        "DFDAD7",
+        "example"
+      ],
+      "delivery": "3 месяца",
+      "materials": "влагостойкий МДФ / меламиновое покрытие под древесные структуры / покрытия с различными цветами"
+    },
+    {
+      "name": "Серия мебели Hosoi",
+      "price": "740 000",
+      "img": "hosoi.jpg",
+      "subtitle": "Современный стиль. Модель Hosoi",
+      "colors": [
+        "AC9B8A",
+        "1058183",
+        "847B6C",
+        "D45B24"
+      ],
+      "delivery": "3 месяца",
+      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+    },
+    {
+      "name": "Серия мебели Lapis",
+      "price": "940 000",
+      "img": "lapis.jpg",
+      "subtitle": "Современный стиль. Модель Lapis",
+      "colors": [
+        "434C51",
+        "BCB2A6",
+        "847B6C",
+        "7B9F9F"
+      ],
+      "delivery": "3 месяца",
+      "materials": "влагостойкое МДФ покрытие с различными цветами. Столешница из материала Mineralmarmo® "
+    },
+    {
+      "name": "Серия мебели Memento",
+      "price": "750 000",
+      "img": "memento.jpg",
+      "subtitle": "Современный стиль. Модель Memento",
+      "colors": [
+        "97A3B3",
+        "EEF3EF",
+        "E8DFD0",
+        "847B6C"
+      ],
+      "delivery": "3 месяца",
+      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+    },
+    {
+      "name": "Серия  мебели Sidero",
+      "price": "850 000",
+      "img": "sidero.jpg",
+      "subtitle": "Современный стиль. Модель Sidero",
+      "colors": [
+        "D45B24",
+        "E8DFD0",
+        "97A3B3",
+        "847B6C"
+      ],
+      "delivery": "3 месяца",
+      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+    },
+    {
+      "name": "Серия мебели Versa",
+      "price": "450 000",
+      "img": "versa.jpg",
+      "subtitle": "Современный стиль. Модель Versa",
+      "colors": [
+        "97A3B3",
+        "EEF3EF",
+        "E8DFD0",
+        "847B6C"
+      ],
+      "delivery": "3 месяца",
+      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+    }
+  ]
+  
+section(id="catalog").catalog
+  +title("Стоимость мебели для ванной")
+  .container
+    .catalog__container
+      for item in catalogDatas
+        +product(item)

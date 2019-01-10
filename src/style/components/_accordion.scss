@@ -1,0 +1,47 @@
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-top: 24px;
+  @media (min-width: 601px) {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: calc(100% - 15px);
+    bottom: rem(30);
+    width: rem(350);
+    min-height: rem(308);
+    overflow: visible;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid $border-color;
+    background: #fff;
+    @media (max-width: 1080px) {
+      bottom: 22px;
+    }
+    @media (max-width: 768px) {
+      bottom: 15px;
+    }
+    &.active {
+      display: block;
+    }
+    &:after, &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    &:after {
+      bottom: 12px;
+      border-color: transparent #fff transparent transparent;
+      border-width: 10px;
+    }
+    &:before {
+      bottom: 11px;
+      border-color: transparent $border-color transparent transparent;
+      border-width: 11px;
+    }
+  }
+}

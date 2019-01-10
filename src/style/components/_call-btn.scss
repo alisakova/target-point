@@ -1,0 +1,30 @@
+.call-btn {
+  display: inline-flex;
+  align-items: stretch;
+  border: 2px solid $main-color;
+  box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  white-space: nowrap;
+  font: {
+    size: rem(18);
+    weight: 600;
+  }
+  @media (max-width: 540px) {
+    display: none;
+  }
+}
+
+.call-btn__text {
+  display: block;
+  padding: rem(15 30 15 46);
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.call-btn__icon {
+  min-width: rem(60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid $main-color;
+}

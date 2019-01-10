@@ -1,0 +1,19 @@
+div(id="call-modal").modal.call-modal.custom-modal
+  a(href="", rel="modal:close").modal-close
+    include ../img/close.svg
+  .call-modal__container
+    .call-modal__col.call-modal__col_form
+      form.form
+        .call-modal__title Заказать обратный звонок
+        .call-modal__text Мы перезвоним Вам через 2 минуты
+        .form__item
+          input(type="text", id="name-2", name="name-2", placeholder="Введите Ваше имя", required).form__input.form__input_bordered
+        .form__item
+          input(type="tel", id="tel-2", name="tel-2", placeholder="Введите Ваш телефон", required).form__input.form__input_bordered
+        button(type="submit").btn.btn_submit._open-success-call-modal Отправить
+      .form__item.form__item_no-max-width.form__item_bg
+        label(for="accept-2", class="form__label checkbox")
+          | Отправляя нам заявку, Вы даете согласие на обработку своих персональных данных. Ваши данные не будут переданы 3-м лицам. Мы заботимся о конфиденциальности данных своих клиентов.
+          input(id="accept-2", type="checkbox", checked, required)
+          span.checkbox__checkmark
+    .call-modal__col.call-modal__col_img

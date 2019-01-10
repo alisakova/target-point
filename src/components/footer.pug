@@ -1,0 +1,50 @@
+- 
+  var socialIcons = [
+    {
+      "alt": "Вконтакте",
+      "img": "vk",
+      "href": "https://vk.com/berlonispb"
+    },
+    {
+      "alt": "Facebook",
+      "img": "facebook",
+      "href": "https://www.facebook.com/berloni.spb/"
+    },
+    {
+      "alt": "Instagram",
+      "img": "instagram",
+      "href": "https://www.instagram.com/berloni.spb/"
+    }
+  ];
+  var footerLinks = [
+    {
+      "name": "Дизайн-студия",
+      "href": "http://berloni-spb.com/katalog"
+    },
+    {
+      "name": "Итальянские кухни",
+      "href": ""
+    }
+  ]
+
+footer.footer
+  .container
+    .footer__content
+      .footer__col.footer__col_logo
+        .footer__logo
+          img(src="img/footer-logo.svg", alt="Логотип Target Point")
+      .footer__col.footer__col_contacts
+        .footer__contacts
+          | 191144<br />
+          | ул. Мытнинская, д. 29<br />
+          a(href="tel:89117771218").footer__link 8 (911) 777 1218
+          a(href="mailto:info@berloni-spb.com").footer__link info@berloni-spb.com
+      .footer__col.footer__col_socials
+        .footer__social-icons
+          for item in socialIcons
+            a(href= item.href, target="_blank").footer__social-icon
+              img(src="img/social-icons/" + item.img + ".svg", alt= item.alt)
+      .footer__col.footer__col_links
+        .footer__links
+          for item in footerLinks
+            a(href= item.href).footer__link= item.name

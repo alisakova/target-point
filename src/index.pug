@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="format-direction", content="telephone=no")
+    //- link(rel="icon", href="img/favicon-16.png", type="image/png")
+    //- link(rel="icon", href="img/favicon-32.png", type="image/png")
+    //- link(rel="icon", href="img/favicon-96.png", type="image/png")
+    meta(name="viewport", content="width=device-width, height=device-height")
+    title Эксклюзивный дилер Target Point® в Санкт-Петербурге
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600|Roboto:300,400,400i", rel="stylesheet")
+    link(rel="stylesheet", type="text/css", href="css/main.css")
+  
+  body
+    include ./components/title
+    include ./components/product
+    include ./components/characteristics
+    include ./components/call-modal
+    include ./components/success-modal
+    +success-modal("success-modal", "Ваша заявка успешно отправлена!", "img/success-modal-img.svg", "art-border_success-call-modal")
+    +success-modal("success-calc-modal", "Ваша заявка на расчёт успешно отправлена!", "img/calc-modal-img.svg", "art-border_success-calc-modal")
+    +success-modal("success-master-modal", "Ваша заявка на вызов замерщика успешно отправлена!", "img/calc-modal-img.svg", "art-border_success-calc-modal")
+    include ./components/header
+    include ./components/nav
+    include ./components/menu
+    main
+      include ./components/intro
+      include ./components/features-info
+      include ./components/about
+      include ./components/features
+      include ./components/catalog
+      include ./components/calculation
+      include ./components/reviews
+      include ./components/purchase
+      include ./components/call-order
+      include ./components/contacts
+      include ./components/map
+    include ./components/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/main.min.js")

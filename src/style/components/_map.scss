@@ -1,0 +1,14 @@
+.map {
+  margin-bottom: rem(26);
+  .title {
+    padding: 0;
+    border-bottom: none;
+    @media (max-width: 540px) {
+      display: none;
+    }
+  }
+}
+
+.map__container {
+  height: rem(262);
+}

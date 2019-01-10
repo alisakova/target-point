@@ -1,0 +1,9 @@
+.title {
+  padding-bottom: rem(30);
+  border-bottom: 1px solid $border-color;
+  margin-bottom: rem(30);
+  @media (max-width: 540px) {
+    margin-bottom: 73px;
+    padding: 0 rem(20) 11px;
+  }
+}

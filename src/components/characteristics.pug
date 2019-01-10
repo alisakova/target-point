@@ -1,0 +1,15 @@
+mixin characteristics(subtitle, colors, delivery, materials)
+  .panel
+    .characteristics
+      .characteristics__title= subtitle 
+      .characteristics__types
+        .characteristics__subtitle.characteristics__subtitle_margin-bottom Популярные цвета фасадов
+        .characteristics__types-container
+          each color in colors
+            .characteristics__type(class="characteristics__type_color-" + color)
+      .characteristics__delivery
+        .characteristics__subtitle Сроки поставки:&nbsp;
+          span.characteristics__text= delivery
+      .characteristics__materials
+        .characteristics__subtitle Материалы:&nbsp;
+          span.characteristics__text= materials

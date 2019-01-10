@@ -1,0 +1,34 @@
+- 
+  var navLinks = [
+    {
+      "href": "#about",
+      "text": "О фабрике"
+    },
+    {
+      "href": "#features",
+      "text": "Преимущества"
+    },
+    {
+      "href": "#catalog",
+      "text": "Цены"
+    },
+    {
+      "href": "#reviews",
+      "text": "Отзывы"
+    },
+    {
+      "href": "#purchase",
+      "text": "Процесс покупки"
+    },
+    {
+      "href": "#contacts",
+      "text": "Контакты"
+    }
+  ]
+  
+nav.nav(class = navAdditionalClass ? navAdditionalClass : "nav_desktop")
+  .container
+    .nav__container
+      for item in navLinks
+        .nav__item 
+          a(href= item.href).nav__link._scroll-btn= item.text

@@ -1,0 +1,26 @@
+.intro {
+  background: url('../img/intro-bg.jpg') left center no-repeat;
+  background-size: cover;
+  margin-bottom: rem(124);
+  position: relative;
+  @media (min-width: 1500px) {
+    background-size: 120%;
+  }
+  @media (min-width: 2500px) {
+    background-size: 130%;
+  }
+  @media (max-width: 540px) {
+    background-image: url('../img/intro-bg-mobile.jpg');
+    background-position: center;
+    min-height: 461px;
+    margin-bottom: 0;
+    .intro__info {
+      display: none;
+    }
+  }
+}
+
+.intro__info {
+  padding: rem(65 20 38 52);
+  max-width: rem(386);
+}

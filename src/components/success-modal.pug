@@ -1,0 +1,9 @@
+mixin success-modal(id, title, img, additionalClass)
+  div(id= id).modal.custom-modal.custom-modal_padding
+    a(href="", rel="modal:close").modal-close
+      include ../img/close.svg
+    .custom-modal__container
+      .custom-modal__title= title
+      .custom-modal__img
+        img(src= img, alt= title)
+      .art-border(class= additionalClass)

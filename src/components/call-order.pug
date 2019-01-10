@@ -1,0 +1,20 @@
+section.call-order
+  +title("Вызвать замерщика для расчёта")
+  .call-order__container
+    .container
+      form.call-order__form.form
+        .form__item
+          input(type="text", id="name", name="name", placeholder="Введите Ваше имя", required).form__input
+        .form__item
+          input(type="tel", id="tel", name="tel", placeholder="Ваш телефон", required).form__input
+        .form__item
+          input(type="text", id="call-time", name="call-time", placeholder="Удобное время для звонка", required).form__input
+        button(type="submit").btn.btn_submit._open-master-modal Вызвать замерщика
+        a(href="success-call-master.html").btn.btn_submit.btn-link Вызвать замерщика
+        .form__item.form__item_no-max-width
+          label(for="accept", class="form__label checkbox")
+            | Отправляя нам заявку, Вы даете согласие на обработку своих персональных данных. Ваши данные не будут переданы 3-м лицам. Мы заботимся о конфиденциальности данных своих клиентов.
+            input(id="accept", type="checkbox", checked, required)
+            span.checkbox__checkmark
+      .call-order__img
+        img(src="img/call-order-img.jpg", alt="Интерьер")

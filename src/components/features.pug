@@ -1,0 +1,20 @@
+-
+  var features = [
+    "Современный стиль в дизайне",
+    "Прочные материалы",
+    "Эргономика и функциональность",
+    "100% Италия",
+    "Для качественной сантехники",
+    "Трендовые цвета и текстуры"
+  ]
+
+section(id="features").features
+  +title("Преимущества")
+  .container
+    .features__items 
+      for item, index in features
+        .features__item
+          .features__icon
+            img(src="img/features/feature-" + index + ".svg", alt="Преимущество")
+          .features__descr!= item
+          

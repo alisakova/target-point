@@ -1,0 +1,16 @@
+.art-border {
+  width: 100%;
+  height: rem(87);
+  background: {
+    repeat: no-repeat;
+    position: center bottom;
+    size: cover;
+  }
+  &_success-call-modal {
+    background-image: url("../img/success-modal-bg.svg");
+  }
+  &_success-calc-modal {
+    margin-top: rem(7);
+    background-image: url("../img/success-calc-modal-bg.svg");
+  }
+}

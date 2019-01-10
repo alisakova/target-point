@@ -1,0 +1,29 @@
+-
+  var introItems = [
+    {
+      "class": "size-icon",
+      "text": "Выезд замерщика на обьект"
+    },
+    {
+      "class": "showroom",
+      "text": "Шоу-рум в центре Санкт - Петербурга"
+    },
+    {
+      "class": "garant-icon",
+      "text": "Профессиональная сборка мебели. Гарантия на комплектующие"
+    }
+  ]
+
+section.intro
+  .container
+    .intro__container
+      .intro__info
+        ul.features-info
+          for item in introItems
+            li.features-info__item(class="features-info__item_" + item.class)= item.text
+        button.call-btn._open-order-call-modal
+          span.call-btn__text Я хочу сделать замер
+          span.call-btn__icon 
+            img(src="img/tel.svg" alt="Иконка телефона")
+  a(href="#about").mouse-btn._scroll-btn
+      
