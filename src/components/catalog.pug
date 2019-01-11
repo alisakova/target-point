@@ -1,93 +1,63 @@
 -
   var catalogDatas = [
     {
-      "name": "Серия мебели 45",
+      "name": "Серия обеденных столов Maciste, 180",
       "price": "540 000",
-      "img": "45.jpg",
-      "subtitle": "Современный стиль. Модель 45",
-      "colors": [
-        "81898B",
-        "E9B021",
-        "DFDAD7",
-        "example"
-      ],
-      "delivery": "3 месяца",
-      "materials": "влагостойкий МДФ / меламиновое покрытие под древесные структуры / покрытия с различными цветами"
+      "img": "maciste-180.jpg",
+      "subtitle": "Современный стиль. Maciste, 180",
+      "scheme": "scheme-maciste.svg",
+      "size": "180 / 230 / 280",
+      "materials": "металл, натуральное дерево"
     },
     {
-      "name": "Серия мебели Hosoi",
+      "name": "Серия обеденных столов Priamo",
       "price": "740 000",
-      "img": "hosoi.jpg",
-      "subtitle": "Современный стиль. Модель Hosoi",
-      "colors": [
-        "AC9B8A",
-        "1058183",
-        "847B6C",
-        "D45B24"
-      ],
-      "delivery": "3 месяца",
-      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+      "img": "priamo.jpg",
+      "subtitle": "Современный стиль. Модель Priamo",
+      "scheme": "scheme-priamo.svg",
+      "size": "270 / 180",
+      "materials": "керамогранит с эффектом «Мрамор», крашеная металлическая конструкция"
     },
     {
-      "name": "Серия мебели Lapis",
+      "name": "Серия обеденных столов Eclipse",
       "price": "940 000",
-      "img": "lapis.jpg",
-      "subtitle": "Современный стиль. Модель Lapis",
-      "colors": [
-        "434C51",
-        "BCB2A6",
-        "847B6C",
-        "7B9F9F"
-      ],
-      "delivery": "3 месяца",
-      "materials": "влагостойкое МДФ покрытие с различными цветами. Столешница из материала Mineralmarmo® "
+      "img": "eclipse.jpg",
+      "subtitle": "Современный стиль. Модель Eclipse",
+      "scheme": "scheme-eclipse.svg",
+      "size": "220",
+      "materials": "полиуретановая основа (ножки), прозрачное закалённое стекло"
     },
     {
-      "name": "Серия мебели Memento",
+      "name": "Серия обеденных столов Taurus",
       "price": "750 000",
-      "img": "memento.jpg",
-      "subtitle": "Современный стиль. Модель Memento",
-      "colors": [
-        "97A3B3",
-        "EEF3EF",
-        "E8DFD0",
-        "847B6C"
-      ],
-      "delivery": "3 месяца",
-      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+      "img": "taurus.jpg",
+      "subtitle": "Современный стиль. Модель Taurus",
+      "scheme": "scheme-taurus.svg",
+      "size": "180 / 270",
+      "materials": "керамогранит с эффектом «Мрамор», крашеная металлическая конструкция"
     },
     {
-      "name": "Серия  мебели Sidero",
+      "name": "Серия обеденных столов Tango",
       "price": "850 000",
-      "img": "sidero.jpg",
-      "subtitle": "Современный стиль. Модель Sidero",
-      "colors": [
-        "D45B24",
-        "E8DFD0",
-        "97A3B3",
-        "847B6C"
-      ],
-      "delivery": "3 месяца",
-      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+      "img": "tango.jpg",
+      "subtitle": "Современный стиль. Модель Tango",
+      "scheme": "scheme-tango.svg",
+      "size": "200",
+      "materials": "основа: белый агломерат, прозрачное закалённое стекло"
     },
     {
-      "name": "Серия мебели Versa",
+      "name": "Серия обеденных столов Libeccio",
       "price": "450 000",
-      "img": "versa.jpg",
-      "subtitle": "Современный стиль. Модель Versa",
-      "colors": [
-        "97A3B3",
-        "EEF3EF",
-        "E8DFD0",
-        "847B6C"
-      ],
-      "delivery": "3 месяца",
-      "materials": "влагостойкий МДФ / глянцевые и матовые покрытия различных цветов"
+      "img": "libeccio.jpg",
+      "subtitle": "Современный стиль. Модель Libeccio",
+      "scheme": "scheme-libeccio.svg",
+      "size": "180 / 270",
+      "materials": "керамогранит с эффектом «Мрамор», крашеная металлическая конструкция"
     }
   ]
   
 section(id="catalog").catalog
-  +title("Стоимость мебели для ванной")
+  +title("Стоимость мебели")
   .container
     .catalog__container
       for item in catalogDatas

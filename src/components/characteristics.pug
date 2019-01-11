@@ -1,15 +1,14 @@
-mixin characteristics(subtitle, colors, delivery, materials)
+mixin characteristics(subtitle, scheme, size, materials)
   .panel
     .characteristics
       .characteristics__title= subtitle 
       .characteristics__types
-        .characteristics__subtitle.characteristics__subtitle_margin-bottom Популярные цвета фасадов
+        .characteristics__subtitle.characteristics__subtitle_margin-bottom Схема стола
         .characteristics__types-container
-          each color in colors
-            .characteristics__type(class="characteristics__type_color-" + color)
+          img(src="img/catalog/" + scheme, alt="Схема стола")
       .characteristics__delivery
-        .characteristics__subtitle Сроки поставки:&nbsp;
-          span.characteristics__text= delivery
+        .characteristics__subtitle Варианты размеров:&nbsp;
+          span.characteristics__text= size
       .characteristics__materials
         .characteristics__subtitle Материалы:&nbsp;
           span.characteristics__text= materials

@@ -11,5 +11,4 @@ mixin product(item)
             img(src="img/catalog/coin.svg", alt="Рубль")
         .product__btn
           button.product__show-more._show-more-btn.accordion
-    +characteristics(item.subtitle, item.colors, item.delivery, item.materials)
-    
+    +characteristics(item.subtitle, item.scheme, item.size, item.materials)

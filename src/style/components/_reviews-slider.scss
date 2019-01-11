@@ -89,6 +89,8 @@
     margin-bottom: rem(15);
     max-width: rem(167);
     min-width: rem(167);
+    overflow: hidden;
+    border-radius: 50%;
     @media (max-width: 540px) {
       margin-bottom: 0;
     }
